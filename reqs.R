@@ -92,9 +92,12 @@ psychology <- com_pdf("psychology.pdf")
 # Music  (https://2012books.lardbucket.org/pdfs/music-theory.pdf)
 music <- com_pdf("music.pdf")
 
+# Comic Con Event Description (https://www.comic-con.org/sites/default/files/forms/CCI19_QuickGuide_Online.pdf)
+event <- com_pdf("CCI19_QuickGuide_Online.pdf")
+
 #Export####
 # Export as:
 # text
 # write.table(music, "music.txt", sep="\t")
 # Excel
-#write_xlsx(music,"music.xlsx")
+# write_xlsx(music,"music.xlsx")
