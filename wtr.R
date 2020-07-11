@@ -379,5 +379,6 @@ wtr <- function(mct){
   mct <- mct[!grepl(' following ', mct$Var1),]
   mct <- mct[!grepl(' choice ', mct$Var1),]
   mct <- mct[!grepl(' here ', mct$Var1),]
+  mct <- mct[!grepl(' & ', mct$Var1),]
   
 }
