@@ -53,11 +53,12 @@ com_xlsx <- function(xlsx_name){
 
 #STEAM Topics####
 
-# Raven Johnson McGrawl Hill (http://biology.org.ua/files/lib/Raven_Johnson_McGraw-Hill_Biology.pdf)
-biology <- com_pdf("biology.pdf")
-
 # AP Physics Textbook (https://d3bxy9euw4e147.cloudfront.net/oscms-prodcms/media/documents/APCollegePhysics-OP.pdf)
 physics <- com_pdf("physics.pdf")
+view(physics)
+
+# Raven Johnson McGrawl Hill (http://biology.org.ua/files/lib/Raven_Johnson_McGraw-Hill_Biology.pdf)
+biology <- com_pdf("biology.pdf")
 
 # Chemistry Textbook (https://web2.mlp.cz/koweb/00/04/24/15/49/chemistry.pdf)
 chemistry <- com_pdf("chemistry.pdf")
