@@ -5,7 +5,6 @@ wtr <- function(mct){
   mct <- mct[!grepl(' to ', mct$Var1),]
   mct <- mct[!grepl(' of ', mct$Var1),]
   mct <- mct[!grepl(' in ', mct$Var1),]
-  mct <- mct[!grepl(' a ', mct$Var1),]
   mct <- mct[!grepl(' that ', mct$Var1),]
   mct <- mct[!grepl(' is ', mct$Var1),]
   mct <- mct[!grepl(' as ', mct$Var1),]

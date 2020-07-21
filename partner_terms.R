@@ -3,10 +3,13 @@ library(tidyverse)
 library(textreadr)
 setwd("~/Desktop/RProjects/edu_word_freq")
 
-woi <- function(document, word){
+partner_terms <- function(document, word){
+
+########################################################
+  # PART 1
+########################################################
 
   # rwwoi = rows with words of interest
-  # cleaning document
   rwwoi <- pdf_text(document) %>% readr::read_lines()
   rwwoi <- rwwoi %>% str_replace_all(",", "") 
   rwwoi <- rwwoi %>% str_replace_all(":", "") 
@@ -17,7 +20,11 @@ woi <- function(document, word){
   
   # subset of only rows with word of interest
   rwwoi <- rwwoi[grepl(word, rwwoi)]
-  
+
+########################################################
+  # PART 2
+########################################################
+
   # 2 words before
   word_before <- paste0('(', word, ').*')
   mct_before <- gsub(word_before, "\\1", rwwoi)
@@ -36,6 +43,10 @@ woi <- function(document, word){
   all_words <- paste0(words_before, " ", words_after)
   all_words <- all_words[!grepl("NA", all_words)]  
 
+########################################################
+  # PART 3
+########################################################
+
   top_terms <- unlist(strsplit(all_words, " "))
   top_terms <- as.data.frame(top_terms)
   top_terms <- data.frame(table(unlist(strsplit(tolower(top_terms$top_terms), " "))))
@@ -48,5 +59,6 @@ woi <- function(document, word){
 }
 
 # list of partner terms
-tt <- woi("physics.pdf", "water")
-view(tt)
+partners <- partner_terms("physics.pdf", "water")
+
+view(partners)
