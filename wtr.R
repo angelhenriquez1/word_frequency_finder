@@ -428,5 +428,13 @@ wtr <- function(mct){
   mct <- mct[!grepl(' having ', mct$Var1),]
   mct <- mct[!grepl(' fact ', mct$Var1),]
   mct <- mct[!grepl(' just ', mct$Var1),]
+  mct <- mct[!grepl(' main ', mct$Var1),]
+  mct <- mct[!grepl(' held ', mct$Var1),]
+  mct <- mct[!grepl(' rather ', mct$Var1),]
+  mct <- mct[!grepl(' creates ', mct$Var1),]
+  mct <- mct[!grepl(' going ', mct$Var1),]
+  mct <- mct[!grepl(' placed ', mct$Var1),]
+  mct <- mct[!grepl(' behind ', mct$Var1),]
+  mct <- mct[!grepl(' become ', mct$Var1),]
   
 }
